@@ -23,24 +23,20 @@ function Register() {
   <div className='container'>
     <h1>Registrate</h1>
     <form onSubmit={onSubmit}>
-      <div>
+      {/* <div>
         <input {...register('name',{ required: true })} id="name" name="name" type="text" placeholder='Nombre'/>
-       {/*  {
-          errors.username && <div className="error">Enter your name</div>
-        } */}
+        
       </div>
       <div>
         <input {...register('lastname',{ required: true })} id="lastname" name="lastname" type="text" placeholder='Apellido'/>
-        {/* {
-          errors.lastname && <div className="error">Enter your last name</div>
-        } */}
-      </div>
+        
+      </div> */}
       <div>
         <input {...register('email',{ required: true , pattern:/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g},)} id="email" name="email" type="text" placeholder='E-mail'/>
       </div>
-      <div>
+     {/*  <div>
         <input {...register('username',{ required: true })} id="username" name="username" type="text" placeholder='Usuario'/>
-      </div>
+      </div> */}
       <div>
         <input {...register('password',{ required: true })} id="password" name="password" type="password" placeholder='Contraseña'/>
       </div>
