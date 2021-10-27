@@ -1,5 +1,6 @@
 const express = require ("express");
 const router = express.Router();
+const passport = require("passport");
 
 //Landing Page
 router.get("/", (req,res) => {  
@@ -17,12 +18,15 @@ router.post("/login", (req,res) => {
 })
 
 // Register Page
-router.get("/signup", (req,res) => {  
+router.get("/signup", (req,res) => {
+  
     res.send("signup")
 })
-router.post("/signup", (req,res) => {  
-    res.send("signup")
-})
+router.post("/signup", passport.authenticate("local-signup", {
+    successRedirect: "/login",
+    failureRedirect: "/signup",
+    passReqToCallback: true
+}))
 
 
 module.exports = router;
