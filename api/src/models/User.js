@@ -12,7 +12,7 @@ userSchema.methods.encryptPassword = (password) => {
 }
 
 //Comparacion de la contraseña que puso el usuario con la de la DB encriptada
-userSchema.methods.comparePassword = (password) => {
+userSchema.methods.comparePassword = function(password){
   return bcrypt.compareSync(password, this.password)
 }
 
