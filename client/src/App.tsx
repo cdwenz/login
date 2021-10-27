@@ -1,5 +1,3 @@
-import { render } from "@testing-library/react";
-import React from "react";
 import {Route} from 'react-router-dom';
 import Ingresar from "./LogIn";
 import Register from "./Register";
