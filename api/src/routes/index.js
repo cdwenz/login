@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 // Importar todos los routers;
 // Ejemplo: const authRouter = require('./auth.js');
-const RouteDefault = require ("./components/routeDefault");
+const RouteDefault = require ("../components/network");
 
 
 
