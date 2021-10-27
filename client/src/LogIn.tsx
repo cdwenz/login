@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import "./LogIn.css";
 
 type LogIn = {
-  username: string;
+  email: string;
   password: string;
 }
 
@@ -23,9 +23,9 @@ function Ingresar() {
     <form onSubmit={onSubmit}>
       <div className='inputs'>
      
-        <input {...register('username',{ required: true })} id="username" name="username" type="text" placeholder='Usuario'/>
+        <input {...register('email',{ required: true })} id="email" name="email" type="text" placeholder='Email'/>
        {/*  {
-          errors.username && <div className="error">Enter your name</div>
+          errors.email && <div className="error">Enter your name</div>
         } */}
       
         {/* <label htmlFor="password">Contraseña</label> */}

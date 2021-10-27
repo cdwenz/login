@@ -1,16 +1,16 @@
 import { render } from "@testing-library/react";
 import React from "react";
+import {Route} from 'react-router-dom';
 import Ingresar from "./LogIn";
 import Register from "./Register";
 function App(){
-    render(
+    return(
         <div>
-            <button>
-            <Ingresar/>
-            </button>
-            <button>
-            <Register/>
-            </button>
+        <Route exact path='/'>
+            <h1>Home</h1>
+        </Route>
+           <Route path='/logIn'component={Ingresar}/>
+           <Route path='/register' component={Register}/>
             
         </div>
     )
