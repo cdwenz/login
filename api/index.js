@@ -9,5 +9,5 @@ server.listen(PORT, () => {
     console.log(`%s listening at ${process.env.PORT}`);
   });
 
-const user = new User({ name: 'LucianoPeruano' }); // crea la entidad
-user.save(); // guarda en bd
+// const user = new User({ name: 'Lucianoo' }); // crea la entidad
+// user.save(); // guarda en bd
