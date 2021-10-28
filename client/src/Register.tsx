@@ -1,12 +1,13 @@
 import React from "react";
-import { useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form';
+import axios from'axios';
 import "./Register.css";
 
 type Data = {
-  name:string;
-  lastname:string;
+ /*  name:string;
+  lastname:string; */
   email:string;
-  username: string;
+  /* username: string; */
   password: string;
   confirmPassword:string;
 }
@@ -14,9 +15,12 @@ type Data = {
 function Register() {
   const {register, handleSubmit} = useForm<Data>()
 
-  const onSubmit = handleSubmit((data) => {
-    /* alert(JSON.stringify(data)) */
-    alert(register)
+  const onSubmit =  handleSubmit((data) =>{
+    /* alert(JSON.stringify(data))  */
+    /* alert(register) */
+    axios.post('http://localhost:3001/signup',data)
+    .then(res=>console.log(res))
+    .catch(error=>console.log(error.message))
   })
 
   return (

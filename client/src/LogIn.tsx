@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 import "./LogIn.css";
 
 type LogIn = {
@@ -12,7 +13,10 @@ function Ingresar() {
 
   const onSubmit = handleSubmit((data) => {
     /* alert(JSON.stringify(data)) */
-    alert(register)
+    /* alert(register) */
+    axios.post('http://localhost:3001/login',data)
+    .then(res=>console.log(res))
+    .catch(error=>console.log(error.message))
   })
 
   return (
@@ -29,7 +33,7 @@ function Ingresar() {
         } */}
       
         {/* <label htmlFor="password">Contraseña</label> */}
-        <input {...register('password',{ required: true })} id="password" name="password" type="password" placeholder='Contraseña'/>
+        <input {...register('password',{ required: true,minLength:8 })} id="password" name="password" type="password" placeholder='Contraseña'/>
         {/* {
           errors.lastname && <div className="error">Enter your last name</div>
         } */}
