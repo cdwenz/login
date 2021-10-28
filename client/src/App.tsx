@@ -1,8 +1,10 @@
+
 import {Route} from 'react-router-dom';
 import Ingresar from "./LogIn";
 import Register from "./Register";
 function App(){
     return(
+
         <div>
         <Route exact path='/'>
             <h1>Home</h1>
@@ -12,6 +14,8 @@ function App(){
             
         </div>
     )
+            
+        
 }
 
 export default App;

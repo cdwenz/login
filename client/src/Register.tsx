@@ -32,7 +32,7 @@ function Register() {
         
       </div> */}
       <div>
-        <input {...register('email',{ required: true })} id="email" name="email" type="text" placeholder='E-mail'/>
+        <input {...register('email',{ required: true , pattern:/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g},)} id="email" name="email" type="text" placeholder='E-mail'/>
       </div>
      {/*  <div>
         <input {...register('username',{ required: true })} id="username" name="username" type="text" placeholder='Usuario'/>
