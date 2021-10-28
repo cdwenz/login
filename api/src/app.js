@@ -4,13 +4,13 @@ const morgan = require("morgan");
 const passport = require("passport");
 const session = require("express-session");
 const flash = require("connect-flash");
-
+const cors= require("cors");
 
 //Initializations
 const server = express();
 
 server.name = "API";
-
+server.use(cors());
 //Extra configs
 server.use(session({
   secret: "mysecretsession",
