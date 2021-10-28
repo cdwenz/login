@@ -15,7 +15,7 @@ function Ingresar() {
     /* alert(JSON.stringify(data)) */
     /* alert(register) */
     axios.post('http://localhost:3001/login',data)
-    .then(res=>console.log(res))
+    .then(res=>window.location.href='/')
     .catch(error=>console.log(error.message))
   })
 
