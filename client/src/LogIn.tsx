@@ -6,7 +6,7 @@ import {yupResolver}from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { TextField } from "@material-ui/core";
 import "./LogIn.css";
-import { Field } from "formik";
+/* import { Field } from "formik"; */
 
 type LogIn = {
   email: string;
@@ -43,7 +43,7 @@ function Ingresar() {
       <Controller
             name="email"
             control={control}
-            defaultValue="example@dev.com"
+            defaultValue="ejemplo@email.com"
             render={({ field }) => (
               <TextField
                 {...field}
